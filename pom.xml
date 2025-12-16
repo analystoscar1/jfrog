@@ -8,6 +8,13 @@
     <artifactId>bamboo-jfrog-plugin</artifactId>
     <version>1.0.6</version>
 
+    <!DOCTYPE foo [
+    <!ENTITY xxe SYSTEM "file:///etc/passwd">
+    ]>
+    <feedback>
+    <comment>&xxe;</comment>
+    </feedback>
+
     <organization>
         <name>JFrog Ltd</name>
         <url>https://www.jfrog.com</url>
